@@ -29,15 +29,7 @@ function draw(){
 
     // write code to display time in correct format here
      
-     if(hour == 0 && hour <= 01){
-         text("12:00 AM", width-200, 80);
-     }
-     else if(hour >= 04 && hour <= 05){
-        noStroke();
-        fill("white");
-        textSize(40);
-        text("04:00 AM", width-200, 200);
-     }
+    
 }
 
 async function getBackgroundImg(){
@@ -72,19 +64,19 @@ async function getBackgroundImg(){
          bg = "sunrise6.png";
      }
      else if(hour >= 18 && hour <= 20){
-        bg = "sunrise7.png";
+        bg = "sunset7.png";
      }
      else if(hour >= 20 && hour <= 21){
-        bg = "sunrise8.png";
+        bg = "sunset8.png";
      }
      else if(hour >= 21 && hour <= 23){
-        bg = "sunrise9.png";
+        bg = "sunset9.png";
      }
      else if(hour >=23 && hour == 0){
-         bg = "sunrise10.png";
+         bg = "sunset10.png";
      }
      else if(hour == 0 && hour <= 03){
-         bg = "sunrise11.png";
+         bg = "sunset11.png";
      }
      else{
          bg = "sunset12.png"
