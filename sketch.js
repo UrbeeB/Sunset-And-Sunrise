@@ -6,7 +6,7 @@ const Constraint = Matter.Constraint;
 var engine, world;
 var backgroundImg;
 
-var bg ;
+var bg;
 
 function preload() {
     getBackgroundImg();
@@ -22,9 +22,9 @@ function setup(){
 function draw(){
 
     // add condition to check if any background image is there to add
-    if(backgroundImg)
+    if(backgroundImg){
     background(backgroundImg);
-
+    }
     Engine.update(engine);
 
     // write code to display time in correct format here
@@ -72,15 +72,16 @@ async function getBackgroundImg(){
      else if(hour >= 21 && hour <= 23){
         bg = "sunset9.png";
      }
-     else if(hour >=23 && hour == 0){
+     else if(hour >=23 && hour === 0){
          bg = "sunset10.png";
      }
-     else if(hour == 0 && hour <= 03){
+     else if(hour === 0 && hour <= 03){
          bg = "sunset11.png";
      }
      else{
          bg = "sunset12.png"
      }
+    
     //load the image in backgroundImg variable here
      backgroundImg = loadImage(bg);
 }
